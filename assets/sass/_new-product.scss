@@ -1,0 +1,37 @@
+.new-product {
+  &-card {
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease 0s;
+
+    &:hover {
+      background-color: $bg-black;
+    }
+
+    &-large .new-product-name{
+      font-size: 3rem;
+    }
+    &-large .new-product-price{
+      font-size: 2rem;
+    }
+    &-large .btn{
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+  &-img {
+    margin-bottom: 20px;
+  }
+  &-name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &-price {
+    font-weight: 700;
+    color: $txt-white;
+    margin-bottom: 20px;
+    display: block;
+  }
+}

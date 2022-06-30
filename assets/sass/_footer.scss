@@ -1,0 +1,67 @@
+.footer {
+  background-color: $second-color;
+
+
+  & > .category-content {
+    padding: 3rem 7rem;
+  }
+  &-logo {
+    color: $txt-white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  &-desc {
+    margin: 20px 0;
+    line-height: 1.5;
+  }
+  &-socials {
+    display: flex;
+
+    & > li ~ li {
+      margin-left: 20px;
+    }
+    & > li > a {
+      font-size: 1.5rem;
+    }
+    & > li > a:hover {
+      color: $txt-white;
+
+    }
+  }
+
+  &-menu > li > a {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+  &-menu > li > a:hover {
+    color: $txt-white;
+  }
+
+  &-sub > input{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+  }
+  &-header {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $txt-white;
+  }
+
+  &-menu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &-menu-title {
+      font-size: 1.5rem;
+      color: $txt-white;
+      text-transform: uppercase;
+  }
+}

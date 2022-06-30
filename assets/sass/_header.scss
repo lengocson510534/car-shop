@@ -1,0 +1,88 @@
+.header {
+    height: $header-height;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+    padding: 0 $header-padding;
+
+    &-link-logo {
+        color: $txt-white;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    &.shrink {
+        height: 60px;
+        background-color: $second-color;
+    }
+
+    &-menu {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+
+        &-list{
+            display: flex;
+            pointer-events: visible;
+            align-items: center;
+            gap: 0 84px;
+
+            & > li > a {
+                text-transform: capitalize;
+                font-size: 1.5rem;
+
+                &.active {
+                    color: $txt-white;
+                }
+                &:hover {
+                    color: $txt-white;
+                }
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background-color: $txt-white;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: opacity 0.5s, transform 0.5s;
+                }
+
+                &.active::after,
+                &:hover::after,
+                &:focus::after {
+                    opacity: 1;
+                    transform: translate3d(0, 0.2em, 0);
+                }
+            }
+        }
+
+        &-item {
+            position: relative;
+        }        
+
+    }
+
+    &-user {
+        font-size: 1.5rem;
+        
+        & > a {
+            margin-right: 20px;
+
+            &:hover {
+                color: $txt-white;
+            }
+        }
+    }
+}

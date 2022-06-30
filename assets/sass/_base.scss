@@ -1,0 +1,90 @@
+@import url(//db.onlinewebfonts.com/c/a5fabafc7a8f60641f2922ce1484ab78?family=Myriad+Pro);
+@import url(//db.onlinewebfonts.com/c/b6539b6d3432c623d8d4f9cc2a29589e?family=Berlin+Sans+FB+Demi);
+
+@font-face {font-family: "Myriad Pro"; src: url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.eot"); src: url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.woff") format("woff"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.svg#Myriad Pro") format("svg"); }
+
+@font-face {font-family: "Berlin Sans FB Demi"; src: url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.eot"); src: url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.woff") format("woff"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.svg#Berlin Sans FB Demi") format("svg"); }
+
+// reset css 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: $main-color;
+    color: $txt-color;
+    font-family: "Myriad Pro", sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    margin: 0 20px;
+}
+
+.btn-wrapper {
+    position: absolute;
+    right: 7rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: $second-color;
+    color: $txt-white;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background-color: $txt-white;
+        color: $main-color;
+    }
+}
+
+.to-right {
+    transform: translateX(-200px);
+}
+.to-left {
+    transform: translateX(200px);
+}
+.to-top,
+.to-right,
+.to-left {
+    opacity: 0;
+    transition: all 1.5s ease 0s;
+}
+.to-right.show,
+.to-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.to-top {
+    transform: translateY(100px);
+}
+
+.to-top.show {
+    transform: translateY(0);
+    opacity: 1;
+}

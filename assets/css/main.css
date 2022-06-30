@@ -1,0 +1,583 @@
+@import url(//db.onlinewebfonts.com/c/a5fabafc7a8f60641f2922ce1484ab78?family=Myriad+Pro);
+@import url(//db.onlinewebfonts.com/c/b6539b6d3432c623d8d4f9cc2a29589e?family=Berlin+Sans+FB+Demi);
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+[class*=col-] {
+  padding: 0 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-center {
+  display: flex;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.eot");
+  src: url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.woff") format("woff"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.svg#Myriad Pro") format("svg");
+}
+@font-face {
+  font-family: "Berlin Sans FB Demi";
+  src: url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.eot");
+  src: url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.woff") format("woff"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b6539b6d3432c623d8d4f9cc2a29589e.svg#Berlin Sans FB Demi") format("svg");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: #1d1d1d;
+  color: #bbbbbb;
+  font-family: "Myriad Pro", sans-serif;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 0 20px;
+}
+
+.btn-wrapper {
+  position: absolute;
+  right: 7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #3a3a3a;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #1d1d1d;
+}
+
+.to-right {
+  transform: translateX(-200px);
+}
+
+.to-left {
+  transform: translateX(200px);
+}
+
+.to-top,
+.to-right,
+.to-left {
+  opacity: 0;
+  transition: all 1.5s ease 0s;
+}
+
+.to-right.show,
+.to-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.to-top {
+  transform: translateY(100px);
+}
+
+.to-top.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header {
+  height: 144px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+  padding: 0 93px;
+}
+.header-link-logo {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.header.shrink {
+  height: 60px;
+  background-color: #3a3a3a;
+}
+.header-menu {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.header-menu-list {
+  display: flex;
+  pointer-events: visible;
+  align-items: center;
+  gap: 0 84px;
+}
+.header-menu-list > li > a {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.header-menu-list > li > a.active {
+  color: #fff;
+}
+.header-menu-list > li > a:hover {
+  color: #fff;
+}
+.header-menu-list > li > a::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.header-menu-list > li > a.active::after, .header-menu-list > li > a:hover::after, .header-menu-list > li > a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+.header-menu-item {
+  position: relative;
+}
+.header-user {
+  font-size: 1.5rem;
+}
+.header-user > a {
+  margin-right: 20px;
+}
+.header-user > a:hover {
+  color: #fff;
+}
+
+.slide {
+  height: 100vh;
+  padding-top: 144px;
+  position: relative;
+}
+.slide-container {
+  height: 100%;
+  position: relative;
+}
+.slide-item.active .slide-title > h3 {
+  transform: translateX(0);
+}
+.slide-item {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+}
+.slide-item.active {
+  height: 100%;
+}
+.slide-item.active .slide-desc > p, .slide-item.active .slide-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-item.active .slide-image img {
+  transform: rotate(0);
+  opacity: 1;
+}
+.slide-image {
+  width: 58%;
+  margin-right: 60px;
+  padding-top: 80px;
+  z-index: 1;
+}
+.slide-image img {
+  width: 100%;
+  transform: rotate(-70deg);
+  transform-origin: bottom;
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.6s ease 0s;
+}
+.slide-txt {
+  width: 42%;
+  padding-left: 60px;
+}
+.slide-title {
+  width: max-content;
+}
+.slide-title > h3 {
+  font-size: 9rem;
+  font-family: "Berlin Sans FB Demi";
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 4px;
+  transform: translateX(-200px);
+  transition: transform 0.5s ease 0s;
+  text-transform: capitalize;
+}
+.slide-desc, .slide-btn {
+  margin-top: 84px;
+}
+.slide-desc > p {
+  font-size: 1.2rem;
+}
+.slide-desc > p, .slide-btn {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+}
+.slide-btn-link {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  background-color: #fff;
+  color: #1d1d1d;
+  transition: transform 0.3s ease 0s;
+  border-radius: 2px;
+}
+.slide-btn-link:hover {
+  transform: translateY(-10px);
+}
+.slide-text {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "Berlin Sans FB Demi";
+  font-size: 9rem;
+  top: 203px;
+  right: -100px;
+  color: #3a3a3a;
+  transform: rotate(-90deg);
+}
+.slide-control {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 98;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slide-control > li {
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+}
+.slide-control > li ~ li {
+  margin-left: 30px;
+}
+.slide-control > li.active {
+  transform: scale(1.5);
+  color: #fff;
+}
+.slide-control > li:hover {
+  color: #fff;
+}
+
+.category {
+  padding: 8rem 0;
+}
+.category-content {
+  padding: 7rem 7rem 0;
+}
+.category-content-img {
+  padding: 4rem;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.category-content-img:hover .category-content-img-inner {
+  transform: scale(1.3);
+}
+.category-content-img-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  transition: transform 1s ease 0s;
+}
+.category-content-title {
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  text-transform: capitalize;
+}
+.category-title {
+  font-family: "Berlin Sans FB Demi";
+  text-align: center;
+  position: relative;
+}
+.category-title > h3 {
+  text-transform: uppercase;
+}
+.category-title-second {
+  font-size: 5rem;
+  color: #3a3a3a;
+  position: absolute;
+  left: 24%;
+  bottom: 40%;
+  z-index: -1;
+}
+.category-title-main {
+  font-size: 3.5rem;
+  z-index: 1;
+}
+
+.new-product-card {
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease 0s;
+}
+.new-product-card:hover {
+  background-color: #000;
+}
+.new-product-card-large .new-product-name {
+  font-size: 3rem;
+}
+.new-product-card-large .new-product-price {
+  font-size: 2rem;
+}
+.new-product-card-large .btn {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+.new-product-img {
+  margin-bottom: 20px;
+}
+.new-product-name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.new-product-price {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.special {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 4rem;
+}
+.special > .category-title {
+  text-align: right;
+  padding: 4rem 7rem;
+  background-color: #000;
+}
+.special .category-title-second {
+  position: relative;
+  font-size: 3.5rem;
+  color: #fff;
+  left: 0;
+  z-index: unset;
+}
+.special .category-title-main {
+  font-size: 9rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: transparent;
+}
+.special .category-title .btn {
+  position: relative;
+  right: unset;
+  top: unset;
+  font-size: 2rem;
+}
+.special .special-price {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.special-img {
+  width: 50%;
+  position: absolute;
+  left: 7rem;
+  bottom: 0px;
+}
+
+.news-card {
+  padding: 20px 20px 0;
+}
+.news-card-img {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+.news-card:hover .img {
+  transform: scale(1.3);
+}
+.news-card-img, .news-card-title, .news-card-preview {
+  margin-bottom: 20px;
+}
+.news-card-title {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.img-wrapper,
+.img-wrapper .img {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.img-wrapper .img {
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s ease 0s;
+}
+
+.bt {
+  color: #fff;
+}
+
+.footer {
+  background-color: #3a3a3a;
+}
+.footer > .category-content {
+  padding: 3rem 7rem;
+}
+.footer-logo {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.footer-desc {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+.footer-socials {
+  display: flex;
+}
+.footer-socials > li ~ li {
+  margin-left: 20px;
+}
+.footer-socials > li > a {
+  font-size: 1.5rem;
+}
+.footer-socials > li > a:hover {
+  color: #fff;
+}
+.footer-menu > li > a {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.footer-menu > li > a:hover {
+  color: #fff;
+}
+.footer-sub > input {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+}
+.footer-header {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer-menu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-menu li {
+  margin-bottom: 1.5rem;
+}
+.footer-menu-title {
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=main.css.map */
