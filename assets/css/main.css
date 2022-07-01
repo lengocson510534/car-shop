@@ -5,6 +5,16 @@
   flex-wrap: wrap;
   margin: 0 -15px;
 }
+@media only screen and (max-width: 1024px) {
+  .row {
+    gap: 50px 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .row {
+    gap: 30px 0;
+  }
+}
 
 [class*=col-] {
   padding: 0 15px;
@@ -63,6 +73,28 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 1024px) {
+  .col-4.col-4-md {
+    width: 100%;
+  }
+
+  .col-1-sm {
+    width: 100%;
+  }
+
+  .col-2-md {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .col-1-sm {
+    width: 100%;
+  }
+
+  .col-2-sm {
+    width: 50%;
+  }
+}
 @font-face {
   font-family: "Myriad Pro";
   src: url("//db.onlinewebfonts.com/t/a5fabafc7a8f60641f2922ce1484ab78.eot");
@@ -112,6 +144,11 @@ img {
   right: 7rem;
   top: 50%;
   transform: translateY(-50%);
+}
+@media only screen and (max-width: 1024px) {
+  .btn-wrapper {
+    top: 200%;
+  }
 }
 
 .btn {
@@ -174,11 +211,26 @@ img {
   transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
   padding: 0 93px;
 }
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header {
+    height: 80px;
+  }
+}
 .header-link-logo {
   color: #fff;
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 800;
+}
+@media only screen and (max-width: 1024px) {
+  .header-link-logo {
+    font-size: 2rem;
+  }
 }
 .header.shrink {
   height: 60px;
@@ -192,11 +244,40 @@ img {
   justify-content: center;
   pointer-events: none;
 }
+@media only screen and (max-width: 1024px) {
+  .header-menu {
+    position: absolute;
+    width: 80%;
+    height: 100vh;
+    background-color: #1d1d1d;
+    inset: unset;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    animation: animate 0.5s forwards;
+    display: none;
+  }
+}
+@keyframes animate {
+  to {
+    transform: translateX(0);
+  }
+}
 .header-menu-list {
   display: flex;
   pointer-events: visible;
   align-items: center;
   gap: 0 84px;
+}
+@media only screen and (max-width: 1024px) {
+  .header-menu-list {
+    flex-direction: column;
+    gap: 50px 0;
+    margin-top: 50px;
+  }
 }
 .header-menu-list > li > a {
   text-transform: capitalize;
@@ -226,14 +307,33 @@ img {
 .header-menu-item {
   position: relative;
 }
+.header-menu-close {
+  font-size: 2rem;
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .header-menu-close {
+    display: block;
+  }
+}
 .header-user {
   font-size: 1.5rem;
+  display: flex;
 }
 .header-user > a {
   margin-right: 20px;
 }
 .header-user > a:hover {
   color: #fff;
+}
+.header-toggle-menu {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .header-toggle-menu {
+    display: unset;
+    margin-left: 2rem;
+  }
 }
 
 .slide {
@@ -281,6 +381,11 @@ img {
   width: 42%;
   padding-left: 60px;
 }
+@media only screen and (max-width: 600px) {
+  .slide-txt {
+    width: 45%;
+  }
+}
 .slide-title {
   width: max-content;
 }
@@ -294,8 +399,18 @@ img {
   transition: transform 0.5s ease 0s;
   text-transform: capitalize;
 }
+@media only screen and (max-width: 1024px) {
+  .slide-title > h3 {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .slide-title > h3 {
+    font-size: 3rem;
+  }
+}
 .slide-desc, .slide-btn {
-  margin-top: 84px;
+  margin-top: 20px;
 }
 .slide-desc > p {
   font-size: 1.2rem;
@@ -315,6 +430,12 @@ img {
   transition: transform 0.3s ease 0s;
   border-radius: 2px;
 }
+@media only screen and (max-width: 600px) {
+  .slide-btn-link {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+}
 .slide-btn-link:hover {
   transform: translateY(-10px);
 }
@@ -328,6 +449,16 @@ img {
   color: #3a3a3a;
   transform: rotate(-90deg);
 }
+@media only screen and (max-width: 1024px) {
+  .slide-text {
+    font-size: 7rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .slide-text {
+    font-size: 5rem;
+  }
+}
 .slide-control {
   display: flex;
   align-items: center;
@@ -336,6 +467,16 @@ img {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media only screen and (max-width: 1024px) {
+  .slide-control {
+    bottom: 300px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .slide-control {
+    bottom: 100px;
+  }
 }
 .slide-control > li {
   font-size: 1.75rem;
@@ -360,6 +501,16 @@ img {
 }
 .category-content {
   padding: 7rem 7rem 0;
+}
+@media only screen and (max-width: 1024px) {
+  .category-content {
+    padding: 15px 15px 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .category-content {
+    padding: 5px 5px 0;
+  }
 }
 .category-content-img {
   padding: 4rem;
@@ -406,11 +557,68 @@ img {
   bottom: 40%;
   z-index: -1;
 }
+@media only screen and (max-width: 1024px) {
+  .category-title-second {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .category-title-second {
+    font-size: 1.5rem;
+    bottom: 70%;
+  }
+}
 .category-title-main {
   font-size: 3.5rem;
   z-index: 1;
 }
+@media only screen and (max-width: 1024px) {
+  .category-title-main {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .category-title-main {
+    font-size: 2rem;
+  }
+}
 
+@media only screen and (max-width: 1024px) {
+  .slideShow {
+    display: grid;
+    justify-content: flex-start;
+    grid-auto-columns: 60%;
+    grid-auto-flow: column;
+    grid-gap: 0.8rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+    padding: 20px 0 0;
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 1024px) and (max-width: 600px) {
+  .slideShow {
+    grid-auto-columns: 90%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .slideShow::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .slideShow > * {
+    scroll-snap-align: start;
+  }
+}
 .new-product-card {
   padding: 20px;
   text-align: center;
@@ -422,12 +630,30 @@ img {
 .new-product-card-large .new-product-name {
   font-size: 3rem;
 }
+@media only screen and (max-width: 1024px) {
+  .new-product-card-large .new-product-name {
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
 .new-product-card-large .new-product-price {
   font-size: 2rem;
+}
+@media only screen and (max-width: 1024px) {
+  .new-product-card-large .new-product-price {
+    font-size: 1rem;
+    font-weight: 700;
+  }
 }
 .new-product-card-large .btn {
   font-size: 1.5rem;
   padding: 1rem 2rem;
+}
+@media only screen and (max-width: 1024px) {
+  .new-product-card-large .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
 }
 .new-product-img {
   margin-bottom: 20px;
@@ -454,6 +680,11 @@ img {
   padding: 4rem 7rem;
   background-color: #000;
 }
+@media only screen and (max-width: 600px) {
+  .special > .category-title {
+    padding: 20px 20px;
+  }
+}
 .special .category-title-second {
   position: relative;
   font-size: 3.5rem;
@@ -461,16 +692,36 @@ img {
   left: 0;
   z-index: unset;
 }
+@media only screen and (max-width: 1024px) {
+  .special .category-title-second {
+    font-size: 3rem;
+  }
+}
 .special .category-title-main {
   font-size: 9rem;
   -webkit-text-stroke-width: 2px;
   -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 1024px) {
+  .special .category-title-main {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .special .category-title-main {
+    font-size: 3rem;
+  }
 }
 .special .category-title .btn {
   position: relative;
   right: unset;
   top: unset;
   font-size: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .special .category-title .btn {
+    font-size: 1.5rem;
+  }
 }
 .special .special-price {
   font-size: 3rem;
@@ -482,6 +733,12 @@ img {
   position: absolute;
   left: 7rem;
   bottom: 0px;
+}
+@media only screen and (max-width: 600px) {
+  .special-img {
+    left: 1rem;
+    bottom: 15%;
+  }
 }
 
 .news-card {
@@ -526,6 +783,16 @@ img {
 .footer > .category-content {
   padding: 3rem 7rem;
 }
+@media only screen and (max-width: 1024px) {
+  .footer > .category-content {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footer > .category-content {
+    padding: 20px;
+  }
+}
 .footer-logo {
   color: #fff;
   font-size: 3rem;
@@ -559,6 +826,11 @@ img {
   border: none;
   outline: none;
   padding: 10px 20px;
+}
+@media only screen and (max-width: 600px) {
+  .footer-sub > input {
+    padding: 10px 20px;
+  }
 }
 .footer-header {
   font-size: 1.5rem;

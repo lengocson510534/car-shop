@@ -4,6 +4,12 @@
 
   & > .category-content {
     padding: 3rem 7rem;
+    @include tablet {
+      padding: 50px;
+    }
+    @include mobile {
+      padding: 20px;
+    }
   }
   &-logo {
     color: $txt-white;
@@ -42,6 +48,10 @@
     border: none;
     outline: none;
     padding: 10px 20px;
+
+    @include mobile {
+      padding: 10px 20px;
+    }
   }
   &-header {
     font-size: 1.5rem;

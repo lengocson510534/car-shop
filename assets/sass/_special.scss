@@ -7,6 +7,10 @@
     text-align: right;
     padding: 4rem 7rem;
     background-color: $bg-black;
+
+    @include mobile {
+      padding: 20px 20px;
+    }
   }
 
   & .category-title-second {
@@ -15,11 +19,22 @@
     color: $txt-white;
     left: 0;
     z-index: unset;
+
+    @include tablet {
+      font-size: 3rem;
+    }
   }
   & .category-title-main {
     font-size: 9rem;
     -webkit-text-stroke-width: 2px;
     -webkit-text-fill-color: transparent;
+
+    @include tablet {
+      font-size: 4.5rem;
+    }
+    @include mobile {
+      font-size: 3rem;
+    }
   }
 
   & .category-title .btn {
@@ -27,6 +42,10 @@
     right: unset;
     top: unset;
     font-size: 2rem;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
   }
 
   & .special-price {
@@ -39,5 +58,10 @@
     position: absolute;
     left: 7rem;
     bottom: 0px;
+
+    @include mobile {
+      left: 1rem;
+      bottom: 15%;
+    }
   }
 }

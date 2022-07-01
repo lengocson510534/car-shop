@@ -44,6 +44,10 @@ img {
     right: 7rem;
     top: 50%;
     transform: translateY(-50%);
+
+    @include tablet {
+        top: 200%;
+    }
 }
 .btn {
     padding: 0.5rem 1rem;

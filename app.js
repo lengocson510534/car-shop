@@ -7,6 +7,11 @@ let hero_slide_next = hero_slide.querySelector('.slide-next')
 let hero_slide_prev = hero_slide.querySelector('.slide-prev')
 let header = document.querySelector('header')
 
+//responsive 
+let menu = document.querySelector('.header-menu')
+let toggleMenu = document.querySelector('.toggle')
+let menuClose = document.querySelector('.header-menu-close')
+
 showSlide = (index) => {
     hero_slide.querySelector('.slide-item.active').classList.remove('active')
     hero_slide.querySelector('.slide-control-item.active').classList.remove('active')
@@ -69,3 +74,12 @@ loop = () => {
 }
 
 loop()
+
+//click toggle 
+toggleMenu.addEventListener('click', () => {
+    menu.style.display = 'block';
+})
+
+menuClose.addEventListener('click', () => {
+    menu.style.display = 'none';
+})

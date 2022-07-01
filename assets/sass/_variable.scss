@@ -10,3 +10,14 @@ $header-padding: 93px;
 
 $second-font: "Berlin Sans FB Demi";
 
+@mixin tablet {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}

@@ -53,6 +53,10 @@
     &-txt {
         width: 42%;
         padding-left: 60px;
+
+        @include mobile {
+            width: 45%;
+        }
     }
 
     &-title {
@@ -67,12 +71,21 @@
             transform: translateX(-200px);
             transition: transform 0.5s ease 0s;
             text-transform: capitalize;
+
+            @include tablet {
+                font-size: 5rem;
+            }
+            @include mobile {
+                font-size: 3rem;
+            }
         }
+
+
     }
 
     &-desc,
     &-btn {
-        margin-top: 84px;
+        margin-top: 20px;
     }
 
     &-desc > p{
@@ -97,6 +110,11 @@
             transition: transform 0.3s ease 0s;
             border-radius: 2px;
 
+            @include mobile {
+                font-size: 1rem;
+                padding: 0.5rem 2rem;
+            }
+
             &:hover {
                 transform: translateY(-10px);
             }
@@ -112,6 +130,13 @@
         right: -100px;
         color: $second-color;
         transform: rotate(-90deg);
+
+        @include tablet {
+            font-size: 7rem;
+        }
+        @include mobile {
+            font-size: 5rem;
+        }
     }
 
     &-control {
@@ -123,6 +148,13 @@
         left: 50%;
         transform: translateX(-50%);
 
+        @include tablet {
+            bottom: 300px;
+        }
+        @include mobile {
+            bottom: 100px;
+        }
+        
         & > li {
             font-size: 1.75rem;
             display: flex;

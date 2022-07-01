@@ -2,6 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+
+    @include tablet {
+        gap: 50px 0;
+    }
+    @include mobile {
+        gap: 30px 0;
+    }
 }
 
 [class*="col-"] {
@@ -60,3 +67,26 @@
     display: flex;
     align-items: center;
 }
+
+@include tablet {
+    .col-4.col-4-md {
+        width: 100%;
+    }
+    .col-1-sm {
+        width: 100%;
+    }
+    .col-2-md {
+        width: 50%;
+    }
+}
+
+@include mobile {
+    .col-1-sm {
+        width: 100%;
+    }
+    .col-2-sm {
+        width: 50%;
+    }
+    
+}
+
